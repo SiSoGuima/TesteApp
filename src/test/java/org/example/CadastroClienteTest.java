@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.Locale;
 
@@ -30,8 +31,16 @@ public class CadastroClienteTest {
         String cidade = "São Paulo";
 
         // Configura o Selenium
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+       // WebDriverManager.chromedriver().setup();
+       // WebDriver driver = new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+
+        WebDriver driver = new ChromeDriver(options);
+
 
         try {
             driver.get("http://royal-app.traces.com.br:8083/cliente/cadastro/1");

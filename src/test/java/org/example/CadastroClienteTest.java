@@ -22,7 +22,7 @@ public class CadastroClienteTest {
         String nome = faker.name().fullName();
         String cpf = faker.number().digits(11);
         String email = faker.internet().emailAddress();
-        String celular = "11" + faker.number().digits(9);
+        String celular = "12" + faker.number().digits(9);
         String dataNascimento = "01011990";  // Podemos randomizar isso depois
         String cep = "01001000"; // Mantemos um CEP fixo de SP
         String rua = "Praça da Sé";
